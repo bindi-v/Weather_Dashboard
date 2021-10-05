@@ -5,125 +5,91 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-      <h1 id="para1">Weather Dashboard</h1>
-      <!--p id="inputContainer">City <input type="text" id="cityInput"></p-->
-      <label class="title is-5">Search for a city:</label>
-      <input class="input" onfocus="this.value=''" type="text" placeholder="City name" id="city">
-      <button type="button" type="submit" id="search" class="button btn">Click Me</button>
+    <header id="mainHeader">
+      <h1>Weather Dashboard</h1>
+      <input class="input"  type="text" placeholder="City name" id="city" />
+      <button type="button" type="submit" id="search" class="button">Click Me</button>
 
-    <!--h2 id="cityName">Atlanta</h2-->
     <p class="search-history">
-    <label class="title is-5">Search History:</label></p>
-            <div class="block mt-3" id="savedCities">
-                <!-- Saved city searches go here --></div>
+    <label id="searchHistory">Search History:</label></p>
+    <div id="savedCities">
+    <!-- Saved city searches go here --></div>
+
     </header>
 
     <!-- City main display -->
-        <div class="container">
-        <div class="column pl-5 pr-6">
-            <div class="block">
-                <p class="title is-2" id="cityName">
-                City<img src="http://openweathermap.org/img/wn/" alt="Placeholder image"></p>
-                <p class="title is-4 nm-1" id="date">Date</p>
-            </div>
-        <div class="block">
-        <div class="columns">
-        <!-- Temperature card -->
-                    <div class="column">
-                    <div class="card is-med-card-mw">
-                    <div class="card-content has-text-centered">
-                    <div class="block"><strong class="has-text-grey">Temperature</strong> </div>
-                    <div class="block" id="currentTemp"><text class="title is-0">F</text></div>
-                    <div class="block" id="currentMaxTemp"><text class="title is-0">F</text></div>
-                    </div>
-                </div>
-            </div>
-         <!-- Humidity card -->
-            <div class="column">
-                <div class="card is-med-card-mw">
-                    <div class="card-content has-text-centered">
-                    <div class="block"><strong class="has-text-grey">Humidity</strong></div>
-                    <div class="block" id="currentHumidity"><text class="title is-0">%</text></div>
-                    
-                </div>
-                </div>
-            </div>
-         <!-- Wind Speed card -->
-            <div class="column">
-                <div class="card is-med-card-mw">
-                    <div class="card-content has-text-centered">
-                        <div class="block"><strong class="has-text-grey">Wind Speed</strong></div>
-                        <div class="block" id="currentWind"> <text class="title is-0"></text><text class="title is-3">mph</text></div>
-                    </div>
-                </div>
-           </div>
-                        
+    <div class="container">
+        <div class="cityContainer">
 
+        <p class="city" id="cityName">City<img src="" alt="Placeholder image"></p>
+        <p class="city" id="date">Date</p>
+        </div>
+    
+        <!-- Temperature card -->
+        <div >
+        <div class="city"><strong class="">Temperature</strong> </div>
+        <div class="city" id="currentTemp"><text>F</text></div>
+        </div>
+
+         <!-- Humidity card -->
+                
+        <div class="city">
+        <div class="city"><strong class="">Humidity</strong></div>
+        <div class="city" id="currentHumidity"><text>%</text></div>
+        </div>
+         <!-- Wind Speed card -->
+        <div class="city">
+        <div class="city"><strong class="">Wind Speed</strong></div>
+        <div class="city" id="currentWind"> <text>mph</text></div>
+        </div>
+    </div>                
+</div>
   <div id="weatherContainer">
       <!--div id="iconsContainer"-->
     <div class="card-content">
-        <p class="is-5 has-text-centered" id="tomorrow">Date</p>
-        <p class="has-text-grey has-text-centered mb-1" id="dateTomorrow">Month</p>
+        <p class="cards" id="tomorrow">Date</p>
+        <p class="cards" id="dateTomorrow">Month</p>
         <p class="weather" id="day1"></p>
-        <div class="image" id="imgOne"><img src="" class="imgClass" id="img1" alt=""></div>  
-        <div class="has-text-centered" id="tomorrowTemp"> Temp: </div>
-        <!--div class="has-text-centered" id="tomorrowMaxTemp">Max Temp: </div-->
-        <div class="has-text-centered has-text-grey" id="tomorrowHumidity">Humidity: </div>
-        <!--p class="minValues" id="day1Min"> Min</p>
-        <p class="maxValues" id="day1Max">Max</p-->
+        <div class="cards" id="imgOne"><img src="" class="imgClass" id="img1" alt=""></div>  
+        <div class="cards" id="tomorrowTemp"> Temp: </div>
+        <div class="cards" id="tomorrowHumidity">Humidity: </div>
     </div>
       
     <div class="card-content">
-        <p class="is-5 has-text-centered" id="dayTwo">Date</p>
-        <p class="has-text-grey has-text-centered mb-1" id="dateTwo">Month</p>
-        <p class="weather" id="day2"></p>
-        <div class="image" id="imgTwo"><img src="" class="imgClass" id="img2" alt=""></div>
-        <div class="has-text-centered" id="dayTwoTemp">Temp: </div>
-        <!--div class="has-text-centered" id="dayTwoMaxTemp">Temp: </div-->
-        <div class="has-text-centered has-text-grey" id="dayTwoHumidity"> Humidity: </div>
-        <!--p class="minValues" id="day2Min">Min</p>
-        <p class="maxValues" id="day2Max">Max</p-->
+        <p class="cards" id="dayTwo">Date</p>
+        <p class="cards" id="dateTwo">Month</p>
+        <div class="cards" id="imgTwo"><img src="" class="imgClass" id="img2" alt=""></div>
+        <div class="cards" id="dayTwoTemp">Temp: </div>
+        <div class="cards" id="dayTwoHumidity"> Humidity: </div>
     </div>
     
     <div class="card-content">
-        <p class="is-5 has-text-centered" id="dayThree">Date</p>
-        <p class="has-text-grey has-text-centered mb-1" id="dateThree">Month</p>
-        <p class="weather" id="day3"></p>
-        <div class="image" id="imgThree"><img src="" class="imgClass" id="img3" alt=""></div>
-        <div class="has-text-centered" id="dayThreeTemp"> Temp: </div>
-        <!--div class="has-text-centered" id="dayThreeMaxTemp">Temp: </div-->
-        <div class="has-text-centered has-text-grey" id="dayThreeHumidity"> Humidity: </div>
-        <!--p class="minValues" id="day3Min"> Min</p>
-        <p class="maxValues" id="day3Max">Max</p-->
+        <p class="cards" id="dayThree">Date</p>
+        <p class="cards" id="dateThree">Month</p>
+        <div class="cards" id="imgThree"><img src="" class="imgClass" id="img3" alt=""></div>
+        <div class="cards" id="dayThreeTemp"> Temp: </div>
+         <div class="cards" id="dayThreeHumidity"> Humidity: </div>
     </div>
     
     <div class="card-content">
-        <p class="is-5 has-text-centered" id="dayFour">Date</p>
-        <p class="has-text-grey has-text-centered mb-1" id="dateFour">Month</p>
-        <p class="weather" id="day4"></p>
-        <div class="image" id="imgFour"><img src="" class="imgClass" id="img4" alt=""></div>
-        <div class="has-text-centered" id="dayFourTemp">Temp:  </div>
-        <!--div class="has-text-centered" id="dayFourMaxTemp">Temp: </div-->
-        <div class="has-text-centered has-text-grey" id="dayFourHumidity"> Humidity: </div>
-        <!--p class="minValues" id="day4Min"> Min</p>
-        <p class="maxValues" id="day4Max">Max</p-->
+        <p class="cards" id="dayFour">Date</p>
+        <p class="cards" id="dateFour">Month</p>
+        <div class="cards" id="imgFour"><img src="" class="imgClass" id="img4" alt=""></div>
+        <div class="cards" id="dayFourTemp">Temp:  </div>
+        <div class="cards" id="dayFourHumidity"> Humidity: </div>
     </div>
     
     <div class="card-content">
-        <p class="is-5 has-text-centered" id="dayFive">Date</p>
-        <p class="has-text-grey has-text-centered mb-1" id="dateFive">Month</p>
-        <p class="weather" id="day5"></p>
-        <div class="image" id="imgFive"><img src="" class="imgClass" id="img5" alt=""></div>
-        <div class="has-text-centered" id="dayFiveTemp">Temp: </div>
-        <!--div class="has-text-centered" id="dayFiveMaxTemp">Temp: </div-->
-        <div class="has-text-centered has-text-grey" id="dayFiveHumidity"> Humidity: </div>
-        <!--p class="minValues" id="day5Min"> Min</p>
-        <p class="maxValues" id="day5Max">Max</p-->
+        <p class="cards" id="dayFive">Date</p>
+        <p class="cards" id="dateFive">Month</p>
+        <div class="cards" id="imgFive"><img src="" class="imgClass" id="img5" alt=""></div>
+        <div class="cards" id="dayFiveTemp">Temp: </div>
+        <div class="cards" id="dayFiveHumidity"> Humidity: </div>
+        
     </div>
   </div>
 
