@@ -26,5 +26,6 @@ THEN I am again presented with current and future conditions for that city
 
 # Deployment: 
 * Application deployed at this live URL -
-
+   https://bindi-v.github.io/Weather_Dashboard/
 * Application GitHub URL submitted -
+https://github.com/bindi-v/Weather_Dashboard
