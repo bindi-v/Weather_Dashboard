@@ -45,7 +45,7 @@ The following image shows the web application's appearance and functionality:
 - [License](#license)
 - [Contribution](#contribution)
 - [Contact](#contact)
-- [Questions]{#questions}
+- [Questions](#questions)
 
 ## Installation 
 
@@ -71,6 +71,7 @@ Trilogy Education and Boot camp activities help to code this application.
 ## Contact
 
 * GitHub : [bindi-v](https://github.com/bindi-v)
+
 * Email : bindi.vaghela@gmail.com
 
 ## Questions
