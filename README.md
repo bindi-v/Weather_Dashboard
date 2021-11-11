@@ -54,7 +54,7 @@ For user N/A
 
 ## Usage
 
-Anyone can use application using deployed link.
+Anyone can use deployed link to use this application.
 
 ## License
 

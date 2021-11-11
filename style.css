@@ -1,6 +1,6 @@
 *{
     color: darkslategray;
-    background: lightyellow;
+    background: #ffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 h1, #searchHistory {
@@ -36,17 +36,19 @@ h1, #searchHistory {
     background-color: lightyellow;
     font-weight: bold;
 }
-.search-history {
-    
+#search-history {
     border-radius: 4px;
     background-color: mediumturquoise;
-    color: darkgray;
+    color: #222;
     text-align: center;
 
 }
-.title {
-    background-color: lightyellow;
+ .block{
+    background-color: mediumturquoise;
 }
+/*.title {
+    background-color: lightyellow;
+}*/
 .container {
     background-color: lightyellow;
     border-radius: 10px;
@@ -57,8 +59,8 @@ h1, #searchHistory {
     display: block;
     border-radius: 10px;
     text-align: center;
-  margin: 5px;
-  background-color: lightyellow;
+    margin: 5px;
+    background-color: lightyellow;
 }
 #weatherContainer {
     display: grid;
@@ -76,8 +78,11 @@ h1, #searchHistory {
     text-align: center;
     padding-bottom: 10px;
     margin: 5px;
-    background-color: burlywood;
+    background-color: azure;
 }
 .cards {
-    background-color: burlywood;
+    background-color: azure;
+}
+.p {
+    background-color: azure;
 }

@@ -61,8 +61,6 @@ return response.json()
         })
         .then(function (data) {
             console.log(data);
-
-        
         
             // Today's weather.
             document.getElementById('cityName').innerHTML = `${city}`
@@ -83,13 +81,13 @@ return response.json()
 
             // 5 Day Forecast Cards
             //Tomorrow's weather
-           //document.getElementById('imgOne').innerHTML = `<img src="images" style=""  alt="weather icon">`
+           document.getElementById('imgOne').innerHTML = `<img src="images" style=""  alt="weather icon">`
 
             document.getElementById('tomorrow').innerHTML = `<strong>${tomorrow}</strong>`
 
             document.getElementById('dateTomorrow').innerHTML = `<p>${dateTomorrow}</p>`
 
-            document.getElementById('tomorrowTemp').innerHTML = ` MaxTemp: ${Math.round(data.daily[0].temp.max)}F  MinTemp: ${Math.round(data.daily[0].temp.min)}F`
+            document.getElementById('tomorrowTemp').innerHTML = ` Max: ${Math.round(data.daily[0].temp.max)}F  Min: ${Math.round(data.daily[0].temp.min)}F`
 
             document.getElementById('tomorrowHumidity').innerHTML = `H: ${data.daily[0].humidity}%`
 
@@ -100,7 +98,7 @@ return response.json()
 
             document.getElementById('dateTwo').innerHTML = `<p>${dateTwo}</p>`
 
-            document.getElementById('dayTwoTemp').innerHTML = `MaxTemp: ${Math.round(data.daily[1].temp.max)}F  MinTemp: ${Math.round(data.daily[1].temp.min)}F`
+            document.getElementById('dayTwoTemp').innerHTML = `Max: ${Math.round(data.daily[1].temp.max)}F  Min: ${Math.round(data.daily[1].temp.min)}F`
 
             document.getElementById('dayTwoHumidity').innerHTML = ` H: ${data.daily[1].humidity}%`
 
@@ -112,7 +110,7 @@ return response.json()
 
             document.getElementById('dateThree').innerHTML = `<p>${dateThree}</p>`
 
-            document.getElementById('dayThreeTemp').innerHTML = `MaxTemp: ${Math.round(data.daily[2].temp.max)}F  MinTemp: ${Math.round(data.daily[2].temp.min)}F`
+            document.getElementById('dayThreeTemp').innerHTML = `Max: ${Math.round(data.daily[2].temp.max)}F  Min: ${Math.round(data.daily[2].temp.min)}F`
 
             document.getElementById('dayThreeHumidity').innerHTML = `H: ${data.daily[2].humidity}%`
 
@@ -124,7 +122,7 @@ return response.json()
 
             document.getElementById('dateFour').innerHTML = `<p>${dateFour}</p>`
 
-            document.getElementById('dayFourTemp').innerHTML = `MaxTemp: ${Math.round(data.daily[3].temp.max)}F  MinTemp: ${Math.round(data.daily[3].temp.min)}F`
+            document.getElementById('dayFourTemp').innerHTML = `Max: ${Math.round(data.daily[3].temp.max)}F  Min: ${Math.round(data.daily[3].temp.min)}F`
 
             document.getElementById('dayFourHumidity').innerHTML = ` H: ${data.daily[3].humidity}%`
 
@@ -136,7 +134,7 @@ return response.json()
 
             document.getElementById('dateFive').innerHTML = `<p>${dateFive}</p>`
 
-            document.getElementById('dayFiveTemp').innerHTML = `MaxTemp: ${Math.round(data.daily[4].temp.max)}F    MinTemp: ${Math.round(data.daily[4].temp.day)}F`
+            document.getElementById('dayFiveTemp').innerHTML = `Max: ${Math.round(data.daily[4].temp.max)}F    Min: ${Math.round(data.daily[4].temp.day)}F`
 
             document.getElementById('dayFiveHumidity').innerHTML = ` H: ${data.daily[4].humidity}%`
         })
