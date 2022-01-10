@@ -72,12 +72,13 @@ return response.json()
             <text class="title">${Math.round(data.current.temp)} F</text>`
 
             document.getElementById('currentHumidity').innerHTML = `
-            <text class="title">${data.current.humidity}%</text>`
+            <text class="title">${data.current.humidity} %</text>`
 
             document.getElementById('currentWind').innerHTML = `
-            <text class="title">${data.current.wind_speed}</text><text class="title">mph</text>`
+            <text class="title">${data.current.wind_speed} </text><text class="title">mph</text>`
 
-            
+            document.getElementById('currentUvi').innerHTML = `
+            <text class="title"></text><text class="title"></text>${data.current.uvi}  `
 
             // 5 Day Forecast Cards
             //Tomorrow's weather
@@ -87,9 +88,15 @@ return response.json()
 
             document.getElementById('dateTomorrow').innerHTML = `<p>${dateTomorrow}</p>`
 
-            document.getElementById('tomorrowTemp').innerHTML = ` Max: ${Math.round(data.daily[0].temp.max)}F  Min: ${Math.round(data.daily[0].temp.min)}F`
+            document.getElementById('tomorrowTemp').innerHTML = ` Mx: ${Math.round(data.daily[0].temp.max)} F  Mn: ${Math.round(data.daily[0].temp.min)} F`
 
-            document.getElementById('tomorrowHumidity').innerHTML = `H: ${data.daily[0].humidity}%`
+            document.getElementById('tomorrowHumidity').innerHTML = `H: ${data.daily[0].humidity} %`
+
+            document.getElementById('tomorrowWind').innerHTML = `
+            <text class="title">Wind: ${data.daily[0].wind_speed} </text><text class="title">mph</text>`
+
+            document.getElementById('tomorrowUvi').innerHTML = `
+            <text class="title"></text><text class="title">UV In: </text>${data.daily[0].uvi}  `
 
             // Day 2's weather
            document.getElementById('imgTwo').innerHTML = `<img src="" alt=" weather icon">`
@@ -98,9 +105,15 @@ return response.json()
 
             document.getElementById('dateTwo').innerHTML = `<p>${dateTwo}</p>`
 
-            document.getElementById('dayTwoTemp').innerHTML = `Max: ${Math.round(data.daily[1].temp.max)}F  Min: ${Math.round(data.daily[1].temp.min)}F`
+            document.getElementById('dayTwoTemp').innerHTML = `Mx: ${Math.round(data.daily[1].temp.max)} F  Mn: ${Math.round(data.daily[1].temp.min)} F`
 
-            document.getElementById('dayTwoHumidity').innerHTML = ` H: ${data.daily[1].humidity}%`
+            document.getElementById('dayTwoHumidity').innerHTML = ` H: ${data.daily[1].humidity} %`
+
+            document.getElementById('dayTwoWind').innerHTML = `
+            <text class="title">Wind: ${data.daily[1].wind_speed} </text><text class="title">mph</text>`
+
+            document.getElementById('dayTwoUvi').innerHTML = `
+            <text class="title"></text><text class="title">UV In: </text>${data.daily[1].uvi}  `
 
             // Day 3's weather
             document.getElementById('imgThree').innerHTML = `
@@ -110,9 +123,15 @@ return response.json()
 
             document.getElementById('dateThree').innerHTML = `<p>${dateThree}</p>`
 
-            document.getElementById('dayThreeTemp').innerHTML = `Max: ${Math.round(data.daily[2].temp.max)}F  Min: ${Math.round(data.daily[2].temp.min)}F`
+            document.getElementById('dayThreeTemp').innerHTML = `Mx: ${Math.round(data.daily[2].temp.max)} F  Mn: ${Math.round(data.daily[2].temp.min)} F`
 
-            document.getElementById('dayThreeHumidity').innerHTML = `H: ${data.daily[2].humidity}%`
+            document.getElementById('dayThreeHumidity').innerHTML = `H: ${data.daily[2].humidity} %`
+            
+            document.getElementById('dayThreeWind').innerHTML = `
+            <text class="title">Wind: ${data.daily[2].wind_speed} </text><text class="title">mph</text>`
+
+            document.getElementById('dayThreeUvi').innerHTML = `
+            <text class="title"></text><text class="title">UV In: </text>${data.daily[2].uvi}  `
 
             // Day 4's weather
             document.getElementById('imgFour').innerHTML = `
@@ -122,9 +141,15 @@ return response.json()
 
             document.getElementById('dateFour').innerHTML = `<p>${dateFour}</p>`
 
-            document.getElementById('dayFourTemp').innerHTML = `Max: ${Math.round(data.daily[3].temp.max)}F  Min: ${Math.round(data.daily[3].temp.min)}F`
+            document.getElementById('dayFourTemp').innerHTML = `Mx: ${Math.round(data.daily[3].temp.max)} F  Mn: ${Math.round(data.daily[3].temp.min)} F`
 
-            document.getElementById('dayFourHumidity').innerHTML = ` H: ${data.daily[3].humidity}%`
+            document.getElementById('dayFourHumidity').innerHTML = ` H: ${data.daily[3].humidity} %`
+
+            document.getElementById('dayFourWind').innerHTML = `
+            <text class="title">Wind: ${data.daily[3].wind_speed} </text><text class="title">mph</text>`
+
+            document.getElementById('dayFourUvi').innerHTML = `
+            <text class="title"></text><text class="title">UV In: </text>${data.daily[3].uvi}  `
 
             // Day 5's weather
             document.getElementById('imgFive').innerHTML = `
@@ -134,9 +159,15 @@ return response.json()
 
             document.getElementById('dateFive').innerHTML = `<p>${dateFive}</p>`
 
-            document.getElementById('dayFiveTemp').innerHTML = `Max: ${Math.round(data.daily[4].temp.max)}F    Min: ${Math.round(data.daily[4].temp.day)}F`
+            document.getElementById('dayFiveTemp').innerHTML = `Mx: ${Math.round(data.daily[4].temp.max)} F    Mn: ${Math.round(data.daily[4].temp.day)} F`
 
-            document.getElementById('dayFiveHumidity').innerHTML = ` H: ${data.daily[4].humidity}%`
+            document.getElementById('dayFiveHumidity').innerHTML = ` H: ${data.daily[4].humidity} %`
+
+            document.getElementById('dayFiveWind').innerHTML = `
+            <text class="title">Wind: ${data.daily[4].wind_speed} </text><text class="title">mph</text>`
+
+            document.getElementById('dayFiveUvi').innerHTML = `
+            <text class="title"></text><text class="title">UV In:</text> ${data.daily[4].uvi}  `
         })
 
     })
